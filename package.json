@@ -1,0 +1,20 @@
+{
+  "name": "major_project_01",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "Shimul",
+  "license": "ISC",
+  "description": "Hey myself Shimul and its its Feb-16 I am going to build my first major website.Starting on Feb-16",
+  "dependencies": {
+    "ejs": "^3.1.10",
+    "express": "^4.21.2",
+    "method-override": "^3.0.0",
+    "mongoose": "^8.10.1",
+    "node": "^23.8.0",
+    "nodemon": "^3.1.9"
+  }
+}
