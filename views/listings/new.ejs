@@ -8,13 +8,17 @@
             <label for="title" class="form-label">Title :</label>
             <input class="form-control"type="text"name="listing[title]"placeholder="Enter your title." required>
             <div class="valid-feedback">
-                Looks good!
-              </div> 
+                Looks good
+            </div>
+            
         </div>
         
         <div class="mb-3">
             <label for="description" class="form-label">Description :</label>
-            <textarea name="listing[description]"class="form-control"></textarea>
+            <textarea  required name="listing[description]"class="form-control"></textarea>
+            <div class="invalid-feedback">
+                Please add a short/long description.
+            </div>
         </div>
         <div class="mb-3">
             <label for="image" class="form-label">Image :</label>
@@ -23,16 +27,25 @@
         </div>
         <div class="mb-3">
             <label for="number" class="form-label">Price :</label>
-            <input type="number"name="listing[price]" class="form-control" required="Enter your price.">
+            <input name="listing[price]" class="form-control" required>
+            <div class="invalid-feedback">
+                Please enter a valid price.
+            </div>
         </div>
         <div class="row">
             <div class="mb-3 col-md-4">
                 <label for="location" class="form-label">Location :</label>
-                <input type="text"name="listing[location]" class="form-control"placeholder="Enter your location.">
+                <input required type="text"name="listing[location]" class="form-control"placeholder="Enter your location.">
+                <div class="invalid-feedback">
+                    Please enter a valid Place.
+                </div>
             </div>
             <div class="mb-3 col-md-8">
                 <label for="country" class="form-label">Country :</label> 
-                <input type="text"name="listing[country]" class="form-control"placeholder="Enter your country.">
+                <input required type="text"name="listing[country]" class="form-control"placeholder="Enter your country.">
+                <div class="invalid-feedback">
+                    Country is required.
+                </div>
             </div>
         </div>
         <br>

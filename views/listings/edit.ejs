@@ -3,30 +3,30 @@
     <div class="col-8 offset-2">
     <h2>Edit a Listing :</h2>
 
-    <form method="POST"action="/listings/<%=listing._id%>?_method=PUT">
+    <form method="POST"action="/listings/<%=listing._id%>?_method=PUT" novalidate class="needs-validation">
         <div>
             <label class="form-label"for="title" class="form-label">Title :</label>
-            <input type="text"name="listing[title]"class="form-control" value="<%=listing.title%>">
+            <input required type="text"name="listing[title]"class="form-control" value="<%=listing.title%>">
         </div>
         <div>
             <label class="form-label"for="description" class="form-label">Description :</label>
-            <textarea class="form-control" type="text"name="listing[description]"value="<%=listing.description%>"></textarea>
+            <textarea required class="form-control" type="text"name="listing[description]"value="<%=listing.description%>"></textarea>
         </div>
         <div>
             <label class="form-label"for="image" class="form-label">Image :</label>
-            <input class="form-control"type="text"name="listing[image]"value="<%=listing.image%>">
+            <input required class="form-control"type="text"name="listing[image]"value="<%=listing.image%>">
         </div>
         <div>
-            <label class="form-label"for="number" class="form-label">Number :</label>
-            <input class="form-control"type="number"name="listing[price]"value="<%=listing.price%>">
+            <label class="form-label"for="number" class="form-label">Price :</label>
+            <input required class="form-control"type="number"name="listing[price]"value="<%=listing.price%>">
         </div>
         <div>
             <label class="form-label"for="location" class="form-label">Location :</label>
-            <input class="form-control"type="text"name="listing[location]"value="<%=listing.location%>">
+            <input required class="form-control"type="text"name="listing[location]"value="<%=listing.location%>">
         </div>
         <div>
             <label class="form-label"for="country" class="form-label">Country :</label>
-            <input class="form-control"type="text"name="listing[country]"value="<%=listing.country%>">
+            <input required class="form-control"type="text"name="listing[country]"value="<%=listing.country%>">
         </div>
         
         <button class="btn btn-dark mt-3">Confirm Edit</button>
@@ -35,3 +35,4 @@
     <br>
 </div>
 </div>
+<script src="/js/script.js"></script>
