@@ -6,15 +6,13 @@
     <div class="card col-6 offset-3 show-card listing-card">
         <img src="<%=listing.image%>" class="card-img-top show-img" alt="listing_image">
         <div class="card-body">
-          
-            <%=listing.description%> <br>
-            &#2547; <%=listing.price.toLocaleString("en-BN")%> <br>
-            <%=listing.location%> <br>
-            <%=listing.country%>
-          </p>
+          <p class="card-text"><i>Owner : <%= listing.owner.username%></i></p>
+          <p class="card-text"><%=listing.description%></p>
+          <p class="card-text"> &#2547; <%=listing.price.toLocaleString("en-BN")%></p>
+          <p class="card-text"><%=listing.location%> </p>
+          <p class="card-text"><%=listing.country%> </p>
         </div>
       </div>
-      <br>
       <div class="btns">
         <a class="btn btn-info col-1.3 offset-3 "href="/listings/<%=listing._id%>/edit">Edit</a></button>
    

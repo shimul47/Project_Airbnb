@@ -1,15 +1,15 @@
 module.exports.isLoggedIn = (req,res,next)=>{
     if(!req.isAuthenticated()){
         //redirect url
-        req.sessoion.redirectUrl = req.originalUrl;
+        req.session.redirectUrl = req.originalUrl;
         req.flash("error","Login to create listing");
-        res.redirect("/login");
+        return res.redirect("/login");
     }
     next();
 }
 
 module.exports.saveRedirectUrl = (req,res,next)=>{
-    if(req.sessoion.redirectUrl){
+    if(req.session.redirectUrl){
         res.locals.redirectUrl = req.sessoion.redirectUrl;
     };
     next();
