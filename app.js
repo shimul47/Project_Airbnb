@@ -1,3 +1,7 @@
+//Implimenting a full-stack project using the MVC framework
+if(process.env.NODE_ENV != "production"){
+    require('dotenv').config();
+}
 const express = require("express");
 const app = express();
 const mongoose = require("mongoose");
@@ -9,7 +13,6 @@ const reviewRouter = require("./routes/review.js");
 const userRouter = require("./routes/user.js");
 const MONGO_URL = "mongodb://127.0.0.1:27017/wanderlust";
 const ExpressError = require("./utils/ExpressError.js");
-const Review = require("./models/review.js");
 const session = require("express-session");
 const flash = require("connect-flash");
 const passport = require("passport");
@@ -58,7 +61,7 @@ app.use((req,res,next)=>{
 // })
 
 main().then(()=>{
-    console.log("connceted")
+    console.log("Connceted to Database")
 })
 .catch((err)=>{
     console.log(err);
