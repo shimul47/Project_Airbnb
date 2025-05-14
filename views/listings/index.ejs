@@ -6,7 +6,7 @@
         <%for(let listing of allListings){%>
             <a class="listing-link"href="/listings/<%=listing._id%>">
                 <div class="card col listing-card" >
-                    <img src="<%=listing.image%>" class="card-img-top" style="height: 20rem" alt="listing_image">
+                    <img src="<%=listing.image.url%>" class="card-img-top" style="height: 20rem" alt="listing_image">
                     <div class="card-img-overlay"></div>
                     <div class="card-body">
                       <p class="card-text"><b><%=listing.title%></b> <br> &#2547; <%=listing.price.toLocaleString("en-BN")%></p>
