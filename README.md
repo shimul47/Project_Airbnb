@@ -12,5 +12,6 @@ Hi! I'm **Shimul**, and I started working on an **Airbnb Clone** on **February 1
 - User Authentication (Sign Up, Login)
 - Listing Properties
 - Booking System
+- Location
 - Payment Integration (Upcoming)
 - Responsive UI (Upcoming)

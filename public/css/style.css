@@ -86,3 +86,9 @@ f-info-links a:hover{
     padding-left: 0;
     padding-right: 0;
 }
+
+/* For Map */
+#map { 
+    height:400px;
+    width: 100vh;
+}

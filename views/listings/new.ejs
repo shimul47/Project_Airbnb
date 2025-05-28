@@ -24,6 +24,7 @@
         <div class="mb-3">
             <label for="image" class="form-label">Upload Image :</label>
             <input type="file"name="listing[image]" class="form-control">
+            required
         </div>
         <div class="mb-3">
             <label for="number" class="form-label">Price :</label>
@@ -33,18 +34,19 @@
             </div>
         </div>
         <div class="row">
-            <div class="mb-3 col-md-4">
-                <label for="location" class="form-label">Location :</label>
-                <input required type="text"name="listing[location]" class="form-control"placeholder="Enter your location.">
-                <div class="invalid-feedback">
-                    Please enter a valid Place.
-                </div>
-            </div>
+            
             <div class="mb-3 col-md-8">
                 <label for="country" class="form-label">Country :</label> 
                 <input required type="text"name="listing[country]" class="form-control"placeholder="Enter your country.">
                 <div class="invalid-feedback">
                     Country is required.
+                </div>
+            </div>
+            <div class="mb-3 col-md-4">
+                <label for="location" class="form-label">Location :</label>
+                <input required type="text"placeholder="Dhaka,Bangladesh"name="listing[location]" class="form-control"placeholder="Enter your location.">
+                <div class="invalid-feedback">
+                    Please enter a valid Place.
                 </div>
             </div>
         </div>
