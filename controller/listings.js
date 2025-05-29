@@ -54,7 +54,7 @@ module.exports.renderEditForm = async(req,res)=>{
         res.redirect("/listings");
     }
     let originalImageUrl = listing.image.url;
-    originalImageUrl.replace("/upload","/upload/h_300,w_250");
+    originalImageUrl.replace("/upload","/upload/h_50,w_50");
     
     res.render("listings/edit.ejs",{listing,originalImageUrl});
 }
@@ -76,6 +76,6 @@ module.exports.distroyListing = async(req,res)=>{
     let {id} = req.params;
     let deletedListing = await Listing.findByIdAndDelete(id);
     req.flash("success","Listing Deleted!");
-    console.log(`Given Data you have been deleted${deletedListing}`);
+    // console.log(`Given Data you have been deleted${deletedListing}`);
     res.redirect("/listings");
 }

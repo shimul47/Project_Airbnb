@@ -28,11 +28,12 @@ module.exports.renderLoginForm = (req,res)=>{
     res.render("users/login.ejs");
 }
 
-module.exports.login = async(req,res)=>{
-    req.flash("success","Successfully logged in!");
-    let redirectUrl = res.locals.saveRedirectUrl || "/listings";
+module.exports.login = async (req, res) => {
+    req.flash("success", "Successfully logged in!");
+    const redirectUrl = req.session.returnTo || "/listings";
+    delete req.session.returnTo; // Clean up
     res.redirect(redirectUrl);
-}
+};
 
 module.exports.logout = (req,res,next)=>{
     req.logout((err)=>{
