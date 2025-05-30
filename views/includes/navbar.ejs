@@ -18,6 +18,12 @@
     padding:0.5rem  3rem 0.5rem 3rem;
     font-size: .9rem ;
   }
+  .icon a{
+    text-decoration: none;
+    margin-right: 1rem;
+    color: #fe424d;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  }
 </style>
 <nav class="navbar navbar-expand-md bg-body-light border-bottom sticky-top">
     <div class="container-fluid">
@@ -28,8 +34,11 @@
       </button>
       <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
         <div class="navbar-nav">
+          <div class="icon">
+            <h3><a href="/listings"><b>WanderLust</b></a></h3>
+          </div>
           
-          <a class="nav-link" href="/listings">Explore</a>
+          <a class="nav-link" href="/listings"><b>Explore</b></a>
         </div>
         <div class="navbar-nav ms-auto">
           <form class="d-flex" role="search">
@@ -38,13 +47,13 @@
           </form>
         </div>
         <div class="navbar-nav ms-auto">
-          <a class="nav-link" href="/listings/new">Airbnb your home</a>
+          <a class="nav-link" href="/listings/new">Add your Feature</a>
           <% if(!currUser) {%>
             <a class="nav-link"  href="/signup"><b>Sign up</b></a>
             <a class="nav-link" href="/login"><b>Login</b></a>
           <%}%>
           <% if(currUser) {%>
-            <a class="nav-link" href="logout">Logout</a>
+            <a class="nav-link" href="/logout">Logout</a>
             <%}%>
         </div>
       </div>
